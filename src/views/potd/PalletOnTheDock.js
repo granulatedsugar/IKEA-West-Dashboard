@@ -31,7 +31,7 @@ const getBadge = status => {
 }
 const fields = ['DC','Volume In', 'Pallets In', 'Volume Out', 'Pallets Out', 'Avg. M3/UL YTD', 'DC + NET Queue', 'Operational Line-Up', 'NET Line-Up']
 
-const Dashboard = () => {
+const PalletOnTheDock = () => {
   return (
     <>
       <WidgetsDropdown />
@@ -210,4 +210,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default PalletOnTheDock;

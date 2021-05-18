@@ -4,7 +4,7 @@ import CIcon from '@coreui/icons-react'
 const _nav =  [
   {
     _tag: 'CSidebarNavItem',
-    name: 'MIP DashBoard',
+    name: 'WEST DASHBOARD',
     to: '/dashboard',
     icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
     badge: {
@@ -14,76 +14,74 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['STORE DISTRIBUTION - NA']
+    _children: ['TEJON']
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'EQU-Utilization',
-    to: '/dashboard',
+    name: '345-Pallet On The Dock',
+    to: '/potd',
     icon: 'cil-layers',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Flow Inbound',
+    name: '345-On Time Delivery',
     to: '/theme/typography',
     icon: 'cil-layers',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Flow Outbound',
-    to: '/dashboard',
-    icon: 'cil-layers',
-  },
-  {
-    _tag: 'CSidebarNavItem',
-    name: 'Flow Internal',
-    to: '/theme/typography',
-    icon: 'cil-layers',
-  },
-  {
-    _tag: 'CSidebarNavItem',
-    name: 'Inventory Diff. & Stock Rolling',
+    name: '345-CB Moves',
     to: '/theme/colors',
     icon: 'cil-layers',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Perf BU Weekly',
+    name: '945-Single Article Orders',
     to: '/theme/typography',
     icon: 'cil-layers',
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['CUSTOMER DISTRIBUTION - NA']
+    _children: ['AMERICAN CANYON']
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Filling Rate',
+    name: 'Pending',
     to: '/dashboard',
     icon: 'cil-layers',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Flow Inbound',
+    name: 'Pending',
     to: '/theme/typography',
     icon: 'cil-layers',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Flow Outbound',
+    name: 'Pending',
+    to: '/dashboard',
+    icon: 'cil-layers',
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['TACOMA']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: '532-On Time Delivery',
     to: '/dashboard',
     icon: 'cil-layers',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Inventory Diff. & Stock Rolling',
-    to: '/theme/colors',
+    name: '532-CB Moves',
+    to: '/theme/typography',
     icon: 'cil-layers',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Perf BU Weekly',
-    to: '/theme/typography',
+    name: 'Pending',
+    to: '/dashboard',
     icon: 'cil-layers',
   },
   {
