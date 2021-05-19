@@ -24,14 +24,14 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavItem',
-    name: '345-On Time Delivery',
-    to: '/theme/typography',
-    icon: 'cil-layers',
+    name: '345-CB Moves',
+    to: '/cbmoves',
+    icon: 'cil-window',
   },
   {
     _tag: 'CSidebarNavItem',
-    name: '345-CB Moves',
-    to: '/theme/colors',
+    name: '345-On Time Delivery',
+    to: '/theme/typography',
     icon: 'cil-layers',
   },
   {
@@ -87,6 +87,18 @@ const _nav =  [
   {
     _tag: 'CSidebarNavTitle',
     _children: ['TOOLS']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Typography',
+    to: '/theme/typography',
+    icon: 'cil-layers',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Colors',
+    to: '/theme/colors',
+    icon: 'cil-layers',
   },
   {
     _tag: 'CSidebarNavDropdown',

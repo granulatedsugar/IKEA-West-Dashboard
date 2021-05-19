@@ -1,4 +1,5 @@
 import React from 'react';
+import CbMoves from './views/cbmoves/CbMoves';
 
 const Toaster = React.lazy(() => import('./views/notifications/toaster/Toaster'));
 const Tables = React.lazy(() => import('./views/base/tables/Tables'));
@@ -42,7 +43,8 @@ const User = React.lazy(() => import('./views/users/User'));
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
-  { path: '/potd', name: 'PalletOnTheDock', component: PalletOnTheDock },
+  { path: '/potd', name: 'Pallet On The Dock', component: PalletOnTheDock },
+  { path: '/cbmoves', name: 'CB Moves', component: CbMoves },
   { path: '/theme', name: 'Theme', component: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', component: Colors },
   { path: '/theme/typography', name: 'Typography', component: Typography },

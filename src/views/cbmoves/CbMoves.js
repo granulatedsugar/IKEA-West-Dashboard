@@ -1,5 +1,5 @@
 import React, { lazy } from 'react'
-import potdData from '../data/PotdData'
+import cbMovesData from '../data/CbMovesData'
 import {
   CBadge,
   CButton,
@@ -16,15 +16,25 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-import MainChartExample from '../charts/PotdMainChartExample.js'
+import MainChartExample from '../charts/MainChartExample.js'
 
 const WidgetsDropdown = lazy(() => import('../widgets/PotdWidgetsDropdown.js'))
+
+const getBadge = status => {
+  switch (status) {
+    case 'Active': return 'success'
+    case 'Inactive': return 'secondary'
+    case 'Pending': return 'warning'
+    case 'Banned': return 'danger'
+    default: return 'primary'
+  }
+}
 
 const fields = ['Module','North Gates', 'South Gates']
 
 const syncDate = new Date().toLocaleString() // Timestamp of last update.
 
-const PalletOnTheDock = () => {
+const CbMoves = () => {
   return (
     <>
       <WidgetsDropdown />
@@ -41,7 +51,7 @@ const PalletOnTheDock = () => {
               </CButton>
               <CButtonGroup className="float-right mr-3">
                 {
-                  ['Week', 'Month', 'Year'].map(value => (
+                  ['Day', 'Month', 'Year'].map(value => (
                     <CButton
                       color="outline-secondary"
                       key={value}
@@ -133,7 +143,7 @@ const PalletOnTheDock = () => {
                   <CCard>
                     <CCardBody>
                     <CDataTable
-                      items={potdData}
+                      items={cbMovesData}
                       fields={fields}
                       hover
                       striped
@@ -141,6 +151,16 @@ const PalletOnTheDock = () => {
                       size="lg"
                       itemsPerPage={10}
                       pagination
+                      scopedSlots = {{
+                        'status':
+                          (item)=>(
+                            <td>
+                              <CBadge color={getBadge(item.status)}>
+                                {item.status}
+                              </CBadge>
+                            </td>
+                          )
+                      }}
                     />
                     </CCardBody>
                     <CCardFooter>
@@ -159,4 +179,4 @@ const PalletOnTheDock = () => {
   )
 }
 
-export default PalletOnTheDock;
+export default CbMoves;

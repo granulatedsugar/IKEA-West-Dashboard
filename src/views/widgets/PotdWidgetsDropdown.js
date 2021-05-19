@@ -25,9 +25,9 @@ const WidgetsDropdown = () => {
               className="mt-3 mx-3"
               style={{height: '70px'}}
               backgroundColor="rgb(255 255 255 / 20%)"
-              dataPoints={[6241, 11051, 9138, 17844, 12411]}
-              label={"Total Pallets"}
-              labels="months"
+              dataPoints={[427, 648, 313, 682, 82, 117]}
+              label={"Total Pallets per Module"}
+              labels="days"
             />
           }
         >
@@ -55,9 +55,9 @@ const WidgetsDropdown = () => {
               className="mt-3 mx-3"
               style={{height: '70px'}}
               backgroundColor="rgb(255 255 255 / 20%)"
-              dataPoints={[5795, 12355, 10357, 17730, 14341, 8932, 7937]}
-              label={['017', '019', '061', '345', '460', '490', '532']}
-              labels="months"
+              dataPoints={[424, 245, 254, 615, 13,]}
+              label={"Total Pallets per Module"}
+              labels="days"
             />
           }
         >
@@ -85,9 +85,9 @@ const WidgetsDropdown = () => {
               className="mt-3 mx-3"
               style={{height: '70px'}}
               backgroundColor="rgb(255 255 255 / 20%)"
-              dataPoints={[0.82, 0.73, 0.81, 0.73, 0.61, 0.75, 0.71]}
-              label={['017', '019', '061', '345', '460', '490', '532']}
-              labels="months"
+              dataPoints={[3, 403, 59, 67, 69, 7]}
+              label={"Total Pallets per Module"}
+              labels="days"
             />
           }
         >
