@@ -18,7 +18,7 @@ import CIcon from '@coreui/icons-react'
 
 import MainChartExample from '../charts/MainChartExample.js'
 
-const WidgetsDropdown = lazy(() => import('../widgets/WidgetsDropdown.js'))
+const WidgetsDropdown = lazy(() => import('../widgets/WidgetsDropdownPotd.js'))
 
 const getBadge = status => {
   switch (status) {
@@ -29,7 +29,7 @@ const getBadge = status => {
     default: return 'primary'
   }
 }
-const fields = ['DC','Volume In', 'Pallets In', 'Volume Out', 'Pallets Out', 'Avg. M3/UL YTD', 'DC + NET Queue', 'Operational Line-Up', 'NET Line-Up']
+const fields = ['Module','North Gates', 'South Gates']
 
 const PalletOnTheDock = () => {
   return (
@@ -39,8 +39,8 @@ const PalletOnTheDock = () => {
         <CCardBody>
           <CRow>
             <CCol sm="5">
-              <h4 id="traffic" className="card-title mb-0">Traffic</h4>
-              <div className="small text-muted">March 2021</div>
+              <h4 id="traffic" className="card-title mb-0">Pallets on the Dock</h4>
+              <div className="small text-muted">May 2021</div>
             </CCol>
             <CCol sm="7" className="d-none d-md-block">
               <CButton color="primary" className="float-right">
@@ -67,54 +67,63 @@ const PalletOnTheDock = () => {
         <CCardFooter>
           <CRow className="text-center">
             <CCol md sm="12" className="mb-sm-2 mb-0">
-              <div className="text-muted">Visits</div>
-              <strong>29.703 Users (40%)</strong>
+              <div className="text-muted">IKEA</div>
+              <strong>269 Regular (11%)</strong>
               <CProgress
                 className="progress-xs mt-2"
                 precision={1}
                 color="success"
-                value={40}
+                value={11}
               />
             </CCol>
             <CCol md sm="12" className="mb-sm-2 mb-0 d-md-down-none">
-              <div className="text-muted">Unique</div>
-              <strong>24.093 Users (20%)</strong>
+              <div className="text-muted">IKEA</div>
+              <strong>16 Tall (1%)</strong>
               <CProgress
                 className="progress-xs mt-2"
                 precision={1}
                 color="info"
-                value={40}
+                value={1}
               />
             </CCol>
             <CCol md sm="12" className="mb-sm-2 mb-0">
-              <div className="text-muted">Pageviews</div>
-              <strong>78.706 Views (60%)</strong>
+              <div className="text-muted">EURO</div>
+              <strong>1276 Regular (52%)</strong>
               <CProgress
                 className="progress-xs mt-2"
                 precision={1}
                 color="warning"
-                value={40}
+                value={52}
               />
             </CCol>
             <CCol md sm="12" className="mb-sm-2 mb-0">
-              <div className="text-muted">New Users</div>
-              <strong>22.123 Users (80%)</strong>
+              <div className="text-muted">EURO</div>
+              <strong>65 Tall (3%)</strong>
               <CProgress
                 className="progress-xs mt-2"
                 precision={1}
                 color="danger"
-                value={40}
+                value={3}
               />
             </CCol>
-            <CCol md sm="12" className="mb-sm-2 mb-0 d-md-down-none">
-              <div className="text-muted">Bounce Rate</div>
-              <strong>Average Rate (40.15%)</strong>
+            <CCol md sm="12" className="mb-sm-2 mb-0">
+              <div className="text-muted">Half Pallet</div>
+              <strong>502 (21%)</strong>
               <CProgress
                 className="progress-xs mt-2"
                 precision={1}
-                value={40}
+                value={21}
               />
             </CCol>
+            <CCol md sm="12" className="mb-sm-2 mb-0">
+              <div className="text-muted">Narrow Pallet</div>
+              <strong>318 (13%)</strong>
+              <CProgress
+                className="progress-xs mt-2"
+                precision={1}
+                value={13}
+              />
+            </CCol>  
           </CRow>
         </CCardFooter>
       </CCard>
@@ -123,57 +132,14 @@ const PalletOnTheDock = () => {
         <CCol>
           <CCard>
             <CCardHeader>
-              IKEA {' - '} North America
+              Information
             </CCardHeader>
             <CCardBody>
-              <CRow>
-                <CCol xs="12" md="6" xl="6">
-                  <CRow>
-                    <CCol sm="6">
-                      <CCallout color="info">
-                        <small className="text-muted">VOLUME IN</small>
-                        <br />
-                        <strong className="h4">73,214</strong>
-                      </CCallout>
-                    </CCol>
-                    <CCol sm="6">
-                      <CCallout color="info">
-                        <small className="text-muted">PALLETS IN</small>
-                        <br />
-                        <strong className="h4">97,109</strong>
-                      </CCallout>
-                    </CCol>
-                  </CRow>
-                  <hr className="mt-0" />
-                </CCol>
-                <CCol xs="12" md="6" xl="6">
-                  <CRow>
-                    <CCol sm="6">
-                      <CCallout color="danger">
-                        <small className="text-muted">VOLUME OUT</small>
-                        <br />
-                        <strong className="h4">77,447</strong>
-                      </CCallout>
-                    </CCol>
-                    <CCol sm="6">
-                      <CCallout color="danger">
-                        <small className="text-muted">PALLETS OUT</small>
-                        <br />
-                        <strong className="h4">108,778</strong>
-                      </CCallout>
-                    </CCol>
-                  </CRow>
-                  <hr className="mt-0" />
-                </CCol>
-              </CRow>
-
-              <br />
-              
               <CRow>
                 <CCol>
                   <CCard>
                     <CCardHeader>
-                      North America Page 1
+                      Pallet by Module
                     </CCardHeader>
                     <CCardBody>
                     <CDataTable

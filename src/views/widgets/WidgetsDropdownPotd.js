@@ -18,7 +18,7 @@ const WidgetsDropdown = () => {
       <CCol sm="6" lg="4">
         <CWidgetDropdown
           color="gradient-primary"
-          header="2,448"
+          header="2,446"
           text="Total Pallets"
           footerSlot={
             <ChartBarSimple
@@ -48,7 +48,7 @@ const WidgetsDropdown = () => {
       <CCol sm="6" lg="4">
         <CWidgetDropdown
           color="gradient-info"
-          header="1,820"
+          header="1,800"
           text="South Gates"
           footerSlot={
             <ChartBarSimple

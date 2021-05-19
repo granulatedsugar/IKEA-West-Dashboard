@@ -4,6 +4,7 @@ import { getStyle, hexToRgba } from '@coreui/utils'
 
 const brandSuccess = getStyle('success') || '#4dbd74'
 const brandInfo = getStyle('info') || '#20a8d8'
+const brandWarning = getStyle('warning') || '#f0ad4e'
 const brandDanger = getStyle('danger') || '#f86c6b'
 
 const MainChartExample = attributes => {
@@ -17,13 +18,13 @@ const MainChartExample = attributes => {
     const data2 = []
     const data3 = []
     for (let i = 0; i <= elements; i++) {
-      data1.push(random(50, 200))
-      data2.push(random(80, 100))
-      data3.push(65)
+      data1.push(random(2090, 4000))
+      data2.push(random(1900, 3900))
+      data3.push(2000)
     }
     return [
       {
-        label: 'My First dataset',
+        label: 'South Gates',
         backgroundColor: hexToRgba(brandInfo, 10),
         borderColor: brandInfo,
         pointHoverBackgroundColor: brandInfo,
@@ -31,15 +32,15 @@ const MainChartExample = attributes => {
         data: data1
       },
       {
-        label: 'My Second dataset',
-        backgroundColor: 'transparent',
-        borderColor: brandSuccess,
-        pointHoverBackgroundColor: brandSuccess,
+        label: 'North Gates',
+        backgroundColor: hexToRgba(brandWarning, 10),
+        borderColor: brandWarning,
+        pointHoverBackgroundColor: brandWarning,
         borderWidth: 2,
         data: data2
       },
       {
-        label: 'My Third dataset',
+        label: 'Median',
         backgroundColor: 'transparent',
         borderColor: brandDanger,
         pointHoverBackgroundColor: brandDanger,
@@ -67,7 +68,7 @@ const MainChartExample = attributes => {
               beginAtZero: true,
               maxTicksLimit: 5,
               stepSize: Math.ceil(250 / 5),
-              max: 250
+              max: 4000
             },
             gridLines: {
               display: true
@@ -92,7 +93,7 @@ const MainChartExample = attributes => {
       {...attributes}
       datasets={defaultDatasets}
       options={defaultOptions}
-      labels={['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']}
+      labels={['4/21', '4/22', '4/23', '4/24', '4/25', '4/26', '4/27', '4/28', '4/29', '4/30', '5/1', '5/2', '5/3', '5/4', '5/5', '5/6', '5/7', '5/8', '5/9', '5/10', '5/11', '5/12', '5/13', '5/14', '5/15', '5/16', '5/17', '5/18']}
     />
   )
 }
