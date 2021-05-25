@@ -18,7 +18,7 @@ import CIcon from '@coreui/icons-react'
 
 import MainChartExample from '../charts/MainChartExample.js'
 
-const WidgetsDropdown = lazy(() => import('../widgets/PotdWidgetsDropdown.js'))
+const WidgetsDropdown = lazy(() => import('../widgets/CbMovesWidgetsDropdown.js'))
 
 const getBadge = status => {
   switch (status) {
@@ -30,14 +30,54 @@ const getBadge = status => {
   }
 }
 
-const fields = ['Module','North Gates', 'South Gates']
+const fields = ['Shift', '1 Pallet', '2 Pallets', '3 Pallets', '4 Pallets']
 
 const syncDate = new Date().toLocaleString() // Timestamp of last update.
 
 const CbMoves = () => {
   return (
     <>
-      <WidgetsDropdown />
+      <CCard>
+        <CCardHeader>
+          <h4 className="card-title mb-2">CBNEW Multicycle</h4>
+        </CCardHeader>
+        <CCardBody>
+          <WidgetsDropdown />
+          <CRow>
+                <CCol>
+                  <CCard>
+                    <CCardBody>
+                      <CDataTable
+                        items={cbMovesData}
+                        fields={fields}
+                        hover
+                        striped
+                        bordered
+                        size="lg"
+                        itemsPerPage={10}
+                        pagination
+                        scopedSlots={{
+                          'status':
+                            (item) => (
+                              <td>
+                                <CBadge color={getBadge(item.status)}>
+                                  {item.status}
+                                </CBadge>
+                              </td>
+                            )
+                        }}
+                      />
+                    </CCardBody>
+                    <CCardFooter>
+                      Last Update: {syncDate}
+                    </CCardFooter>
+                  </CCard>
+                </CCol>
+              </CRow>
+        </CCardBody>
+      </CCard>
+
+
       <CCard>
         <CCardBody>
           <CRow>
@@ -47,7 +87,7 @@ const CbMoves = () => {
             </CCol>
             <CCol sm="7" className="d-none d-md-block">
               <CButton color="primary" className="float-right">
-                <CIcon name="cil-cloud-download"/>
+                <CIcon name="cil-cloud-download" />
               </CButton>
               <CButtonGroup className="float-right mr-3">
                 {
@@ -65,7 +105,7 @@ const CbMoves = () => {
               </CButtonGroup>
             </CCol>
           </CRow>
-          <MainChartExample style={{height: '300px', marginTop: '40px'}}/>
+          <MainChartExample style={{ height: '300px', marginTop: '40px' }} />
         </CCardBody>
         <CCardFooter>
           <CRow className="text-center">
@@ -126,7 +166,7 @@ const CbMoves = () => {
                 precision={1}
                 value={13}
               />
-            </CCol>  
+            </CCol>
           </CRow>
         </CCardFooter>
       </CCard>
@@ -142,26 +182,26 @@ const CbMoves = () => {
                 <CCol>
                   <CCard>
                     <CCardBody>
-                    <CDataTable
-                      items={cbMovesData}
-                      fields={fields}
-                      hover
-                      striped
-                      bordered
-                      size="lg"
-                      itemsPerPage={10}
-                      pagination
-                      scopedSlots = {{
-                        'status':
-                          (item)=>(
-                            <td>
-                              <CBadge color={getBadge(item.status)}>
-                                {item.status}
-                              </CBadge>
-                            </td>
-                          )
-                      }}
-                    />
+                      <CDataTable
+                        items={cbMovesData}
+                        fields={fields}
+                        hover
+                        striped
+                        bordered
+                        size="lg"
+                        itemsPerPage={10}
+                        pagination
+                        scopedSlots={{
+                          'status':
+                            (item) => (
+                              <td>
+                                <CBadge color={getBadge(item.status)}>
+                                  {item.status}
+                                </CBadge>
+                              </td>
+                            )
+                        }}
+                      />
                     </CCardBody>
                     <CCardFooter>
                       Last Update: {syncDate}

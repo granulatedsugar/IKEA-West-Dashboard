@@ -16,7 +16,7 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-import MainChartExample from '../charts/PotdMainChartExample.js'
+import MainChartExample from '../charts/PotdMainChart.js'
 
 const WidgetsDropdown = lazy(() => import('../widgets/PotdWidgetsDropdown.js'))
 
