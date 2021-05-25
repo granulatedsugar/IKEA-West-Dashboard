@@ -13,7 +13,7 @@ import CIcon from '@coreui/icons-react'
 import ChartLineSimple from '../charts/ChartLineSimple'
 import ChartBarSimple from '../charts/ChartBarSimple'
 
-const WidgetsDropdown = () => {
+const WidgetsDropdown = (props) => {
   return (
     <CRow>
       <CCol sm="4" lg="4">
