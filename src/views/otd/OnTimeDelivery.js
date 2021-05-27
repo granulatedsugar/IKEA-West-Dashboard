@@ -1,5 +1,5 @@
 import React, { lazy } from 'react'
-import potdData from '../data/PotdData'
+import potdData from '../data/potd/PotdTableData'
 import {
   CBadge,
   CButton,

@@ -1,5 +1,4 @@
 import React, { lazy } from 'react'
-import potdData from '../data/PotdData'
 import {
   CBadge,
   CButton,
@@ -16,18 +15,23 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
+// Data
+import potdTableData from '../data/potd/PotdTableData'
+import potdNumberWidgetData from '../data/potd/PotdNumberWidgetData'
+
 import MainChartExample from '../charts/PotdMainChart.js'
 
-const WidgetsDropdown = lazy(() => import('../widgets/PotdWidgetsDropdown.js'))
+const NumberBarWidget = lazy(() => import('../widgets/NumberBarWidget.js'))
 
 const fields = ['Module','North Gates', 'South Gates']
 
 const syncDate = new Date().toLocaleString() // Timestamp of last update.
 
 const PalletOnTheDock = () => {
+
   return (
     <>
-      <WidgetsDropdown />
+      <NumberBarWidget data={NumberBarWidget} />
       <CCard>
         <CCardBody>
           <CRow>
@@ -41,12 +45,12 @@ const PalletOnTheDock = () => {
               </CButton>
               <CButtonGroup className="float-right mr-3">
                 {
-                  ['Week', 'Month', 'Year'].map(value => (
+                  ['Day', 'Week', 'Month'].map(value => (
                     <CButton
                       color="outline-secondary"
                       key={value}
                       className="mx-0"
-                      active={value === 'Month'}
+                      active={value === 'Day'}
                     >
                       {value}
                     </CButton>
@@ -133,7 +137,7 @@ const PalletOnTheDock = () => {
                   <CCard>
                     <CCardBody>
                     <CDataTable
-                      items={potdData}
+                      items={potdTableData}
                       fields={fields}
                       hover
                       striped

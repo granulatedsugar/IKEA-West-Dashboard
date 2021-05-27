@@ -12,7 +12,7 @@ import {
   CProgress,
 } from '@coreui/react'
 import WidgetsBrand from './WidgetsBrand'
-import WidgetsDropdown from './PotdWidgetsDropdown'
+import WidgetsDropdown from './NumberBarWidget'
 
 import ChartLineSimple from '../charts/ChartLineSimple'
 import ChartBarSimple from '../charts/ChartBarSimple'
