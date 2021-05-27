@@ -31,7 +31,7 @@ const _nav =  [
   {
     _tag: 'CSidebarNavItem',
     name: '345-On Time Delivery',
-    to: '/theme/typography',
+    to: '/otd',
     icon: 'cil-layers',
   },
   {

@@ -31,7 +31,7 @@ const getBadge = status => {
   }
 }
 
-const fields = ['Shift', '1 Pallet', '2 Pallets', '3 Pallets', '4 Pallets']
+const fields = ['Shift', '1 Pallet Move', '2 Pallets Move', '3 Pallets Move', '4 Pallets Move']
 
 const syncDate = new Date().toLocaleString() // Timestamp of last update.
 

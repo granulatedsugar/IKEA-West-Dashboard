@@ -29,7 +29,7 @@ const MainChartExample = attributes => {
     }
     return [
       {
-        label: '1 Pallet',
+        label: '1 Pallet Move',
         backgroundColor: hexToRgba(brandInfo, 10),
         borderColor: brandInfo,
         pointHoverBackgroundColor: brandInfo,
@@ -37,7 +37,7 @@ const MainChartExample = attributes => {
         data: data1
       },
       {
-        label: '2 Pallets',
+        label: '2 Pallets Move',
         backgroundColor: hexToRgba(brandSuccess, 10),
         borderColor: brandSuccess,
         pointHoverBackgroundColor: brandSuccess,
@@ -45,7 +45,7 @@ const MainChartExample = attributes => {
         data: data2
       },
       {
-        label: '3 Pallets',
+        label: '3 Pallets Move',
         backgroundColor: hexToRgba(brandWarning, 10),
         borderColor: brandWarning,
         pointHoverBackgroundColor: brandWarning,
@@ -53,7 +53,7 @@ const MainChartExample = attributes => {
         data: data3
       },
       {
-        label: '4 Pallets',
+        label: '4 Pallets Move',
         backgroundColor: hexToRgba(brandPrimary, 10),
         borderColor: brandPrimary,
         pointHoverBackgroundColor: brandPrimary,
