@@ -24,7 +24,7 @@ const WidgetsDropdown = () => {
       <CCol sm="4" lg="3">
         <CWidgetProgressIcon
           header="YTD"
-          text="DC Order Handling"
+          text="Shipment"
           color="gradient-danger"
           progressSlot={<CProgress color="danger" size="xs" value="65.9" animated className="my-3"
           />}
@@ -33,8 +33,9 @@ const WidgetsDropdown = () => {
         </CWidgetProgressIcon>
       </CCol>
       <CCol sm="4" lg="3">
-        <CWidgetSimple header="Advance" text="1,123">
-          <ChartLineSimple style={{ height: '60px' }} borderColor="primary" />
+        <CWidgetSimple header="DC Dispatch" text="90%">
+        <CProgress color="danger" size="xs" value="65.9" animated className="my-3"
+          />
         </CWidgetSimple>
       </CCol>
       <CCol sm="4" lg="3">

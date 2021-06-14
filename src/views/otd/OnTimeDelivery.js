@@ -19,6 +19,7 @@ import CIcon from '@coreui/icons-react'
 import MainChartExample from '../charts/PotdMainChart.js'
 
 const WidgetsDropdown = lazy(() => import('../widgets/OnTimeDeliveryWidgetsDropdown.js'))
+const WidgetsDropdown2 = lazy(() => import('../widgets/OnTimeDeliveryWidgetsDropdown2.js'))
 
 const fields = ['Module','North Gates', 'South Gates']
 
@@ -28,6 +29,7 @@ const OnTimeDelivery = () => {
   return (
     <>
       <WidgetsDropdown />
+      <WidgetsDropdown2 />
       <CCard>
         <CCardBody>
           <CRow>
