@@ -16,7 +16,7 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-import MainChartExample from '../charts/PotdMainChart.js'
+import DcOrderHandlingChart from '../charts/DcOrderHandlingChart.js'
 
 const WidgetsDropdown = lazy(() => import('../widgets/OnTimeDeliveryWidgetsDropdown.js'))
 const WidgetsDropdown2 = lazy(() => import('../widgets/OnTimeDeliveryWidgetsDropdown2.js'))
@@ -29,35 +29,20 @@ const OnTimeDelivery = () => {
   return (
     <>
       <WidgetsDropdown />
-      <WidgetsDropdown2 />
       <CCard>
         <CCardBody>
           <CRow>
             <CCol sm="5">
-              <h4 id="traffic" className="card-title mb-0">Pallets on the Dock History</h4>
-              <div className="small text-muted">May 2021</div>
+              <h4 id="traffic" className="card-title mb-0">DC Order Handling</h4>
+              <div className="small text-muted">FY21</div>
             </CCol>
             <CCol sm="7" className="d-none d-md-block">
               <CButton color="primary" className="float-right">
                 <CIcon name="cil-cloud-download"/>
               </CButton>
-              <CButtonGroup className="float-right mr-3">
-                {
-                  ['Week', 'Month', 'Year'].map(value => (
-                    <CButton
-                      color="outline-secondary"
-                      key={value}
-                      className="mx-0"
-                      active={value === 'Month'}
-                    >
-                      {value}
-                    </CButton>
-                  ))
-                }
-              </CButtonGroup>
             </CCol>
           </CRow>
-          <MainChartExample style={{height: '300px', marginTop: '40px'}}/>
+          <DcOrderHandlingChart style={{height: '300px', marginTop: '40px'}}/>
         </CCardBody>
         <CCardFooter>
           <CRow className="text-center">
@@ -122,7 +107,7 @@ const OnTimeDelivery = () => {
           </CRow>
         </CCardFooter>
       </CCard>
-
+      <WidgetsDropdown2 />
       <CRow>
         <CCol>
           <CCard>

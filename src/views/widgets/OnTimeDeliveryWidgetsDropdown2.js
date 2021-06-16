@@ -26,27 +26,44 @@ const WidgetsDropdown = () => {
           header="YTD"
           text="Shipment"
           color="gradient-danger"
-          progressSlot={<CProgress color="danger" size="xs" value="65.9" animated className="my-3"
+          progressSlot={<CProgress color="success" size="xs" value="88" animated className="my-3"
           />}
         >
           <CIcon name="cil-speedometer" height="36" />
         </CWidgetProgressIcon>
       </CCol>
       <CCol sm="4" lg="3">
-        <CWidgetSimple header="DC Dispatch" text="90%">
-        <CProgress color="danger" size="xs" value="65.9" animated className="my-3"
-          />
-        </CWidgetSimple>
+        <CWidgetProgressIcon
+          header="90% On Time"
+          text="DC Dispatch"
+          color="gradient-danger"
+          progressSlot={<CProgress color="success" size="xs" value="90" animated className="my-3"
+          />}
+        >
+          <CIcon name="cil-grid" height="36" />
+        </CWidgetProgressIcon>
       </CCol>
       <CCol sm="4" lg="3">
-        <CWidgetSimple header="On Time" text="1,123">
-          <ChartLineSimple style={{ height: '60px' }} borderColor="info" />
-        </CWidgetSimple>
+        <CWidgetProgressIcon
+          header="75% On Time"
+          text="Transport"
+          color="gradient-danger"
+          progressSlot={<CProgress color="danger" size="xs" value="75" animated className="my-3"
+          />}
+        >
+          <CIcon name="cil-truck" height="36" />
+        </CWidgetProgressIcon>
       </CCol>
       <CCol sm="4" lg="3">
-        <CWidgetSimple header="Late" text="1,123">
-          <ChartLineSimple style={{ height: '60px' }} borderColor="danger" />
-        </CWidgetSimple>
+        <CWidgetProgressIcon
+          header="99% On Time"
+          text="Store Unload"
+          color="gradient-danger"
+          progressSlot={<CProgress color="success" size="xs" value="99" animated className="my-3"
+          />}
+        >
+          <CIcon name="cil-cart" height="36" />
+        </CWidgetProgressIcon>
       </CCol>
     </CRow>
   )
